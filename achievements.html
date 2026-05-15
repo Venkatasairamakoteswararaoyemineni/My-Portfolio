@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Achievements</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at top left, rgba(0,255,255,0.12), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(0,120,255,0.12), transparent 35%);
+      z-index:-1;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 0;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,255,255,0.15);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav-container{
+      width:90%;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:cyan;
+      letter-spacing:2px;
+    }
+
+    .logo span{
+      color:white;
+    }
+
+    /* BACK BUTTON */
+
+    .back-btn{
+      text-decoration:none;
+      color:white;
+      border:1px solid rgba(255,255,255,0.2);
+      padding:12px 22px;
+      border-radius:12px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .back-btn:hover{
+      border-color:cyan;
+      color:cyan;
+      box-shadow:0 0 20px rgba(0,255,255,0.15);
+    }
+
+    /* SECTION */
+
+    #achievements{
+      width:90%;
+      margin:auto;
+      padding:100px 0;
+    }
+
+    /* TITLE */
+
+    .section-title{
+      font-size:60px;
+      margin-bottom:60px;
+      text-align:center;
+      font-weight:bold;
+      letter-spacing:1px;
+    }
+
+    .section-title span{
+      color:cyan;
+    }
+
+    /* GRID */
+
+    .achievement-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
+    }
+
+    /* CARD */
+
+    .card{
+      position:relative;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:30px;
+      padding:35px;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+      transition:0.4s ease;
+      box-shadow:0 0 25px rgba(0,255,255,0.04);
+    }
+
+    /* HOVER */
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.02);
+      border-color:cyan;
+      box-shadow:0 0 40px rgba(0,255,255,0.18);
+    }
+
+    /* GLOW EFFECT */
+
+    .card::before{
+      content:"";
+      position:absolute;
+      top:-50%;
+      left:-50%;
+      width:200%;
+      height:200%;
+      background:linear-gradient(
+        45deg,
+        transparent,
+        rgba(0,255,255,0.08),
+        transparent
+      );
+      transform:rotate(25deg);
+      transition:0.6s;
+      opacity:0;
+    }
+
+    .card:hover::before{
+      opacity:1;
+    }
+
+    /* TITLE */
+
+    .card h3{
+      margin-bottom:20px;
+      font-size:26px;
+      line-height:1.4;
+      color:white;
+    }
+
+    /* DESCRIPTION */
+
+    .card p{
+      color:#cbd5e1;
+      line-height:1.9;
+      margin-bottom:25px;
+      font-size:16px;
+    }
+
+    /* TAGS */
+
+    .tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .tag{
+      padding:9px 16px;
+      border-radius:30px;
+      background:rgba(0,255,255,0.08);
+      border:1px solid rgba(0,255,255,0.18);
+      color:cyan;
+      font-size:14px;
+      transition:0.3s;
+    }
+
+    .tag:hover{
+      background:cyan;
+      color:black;
+      transform:scale(1.05);
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      #achievements{
+        padding:70px 0;
+      }
+
+      .section-title{
+        font-size:42px;
+        margin-bottom:40px;
+      }
+
+      .achievement-grid{
+        gap:25px;
+      }
+
+      .card{
+        padding:28px;
+      }
+
+      .card h3{
+        font-size:22px;
+      }
+
+      .card p{
+        font-size:15px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <div class="logo">
+        MY<span>PORTFOLIO</span>
+      </div>
+
+      <!-- CHANGE THIS NAME IF YOUR MAIN FILE NAME IS DIFFERENT -->
+
+      <a href="index.html" class="back-btn">← Back</a>
+
+    </div>
+
+  </nav>
+
+  <!-- ACHIEVEMENTS SECTION -->
+
+  <section id="achievements">
+
+    <h2 class="section-title">
+      Certifications & <span>Achievements</span>
+    </h2>
+
+    <div class="achievement-grid">
+
+      <!-- CARD 1 -->
+
+      <div class="card">
+        <h3>Ethical Hacking Hackathon - 3rd Prize</h3>
+
+        <p>
+          Secured Merit Certification and 3rd Prize in a 24 Hours Ethical Hacking Hackathon focused on penetration testing, vulnerability assessment, and cybersecurity challenges.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Ethical Hacking</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Hackathon</span>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="card">
+        <h3>TryHackMe CTF Participation</h3>
+
+        <p>
+          Participated in the “Love at First Breach” Capture The Flag competition on TryHackMe involving reconnaissance, exploitation, and cybersecurity labs.
+        </p>
+
+        <div class="tags">
+          <span class="tag">CTF</span>
+          <span class="tag">TryHackMe</span>
+          <span class="tag">Security Labs</span>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="card">
+        <h3>Cyber Crime & Digital Forensics Hackathon - 2nd Prize</h3>
+
+        <p>
+          Achieved Merit Certification and 2nd Prize in a 24 Hours Cyber Crime Investigation & Digital Forensics Hackathon with hands-on forensic analysis experience.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Digital Forensics</span>
+          <span class="tag">Cyber Crime</span>
+          <span class="tag">Investigation</span>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="card">
+        <h3>IIC Aikyam Change Agent Certification</h3>
+
+        <p>
+          Received certification from Institution’s Innovation Council (IIC) for active participation and contribution as an Aikyam Change Agent.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Leadership</span>
+          <span class="tag">Innovation</span>
+          <span class="tag">IIC</span>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="card">
+        <h3>Web Development Internship - InternPe</h3>
+
+        <p>
+          Successfully completed Web Development Internship at InternPe focusing on frontend technologies, responsive web design, and modern UI development.
+        </p>
+
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="card">
+        <h3>Certified Cyber Security Educator Professional (CCEP)</h3>
+
+        <p>
+          Earned the Certified Cyber Security Educator Professional certification from RED TEAM LEADERS demonstrating cybersecurity awareness and professional knowledge.
+        </p>
+
+        <div class="tags">
+          <span class="tag">CCEP</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">RED TEAM LEADERS</span>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+
+      <div class="card">
+        <h3>Python Certificate of Accomplishment - HackerRank</h3>
+
+        <p>
+          Achieved Python programming certification from HackerRank showcasing problem-solving abilities and Python development skills.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">Programming</span>
+          <span class="tag">HackerRank</span>
+        </div>
+      </div>
+
+      <!-- CARD 8 -->
+
+      <div class="card">
+        <h3>Cybersecurity Certificate - Skill India</h3>
+
+        <p>
+          Completed Cybersecurity Certification under Skill India initiative focusing on cybersecurity fundamentals, digital safety, and security awareness.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Skill India</span>
+          <span class="tag">Security Awareness</span>
+        </div>
+      </div>
+
+      <!-- CARD 9 -->
+
+      <div class="card">
+        <h3>Ashtavadhanam - BECTAGON 2K26</h3>
+
+        <p>
+          Secured Second Prize in Ashtavadhanam during BECTAGON 2K26, a National Level Techno-Cultural-Literary-Sports Fest organized by Bapatla Engineering College.
+        </p>
+
+        <div class="tags">
+          <span class="tag">National Level Fest</span>
+          <span class="tag">Achievement</span>
+          <span class="tag">BECTAGON 2K26</span>
+        </div>
+      </div>
+
+      <!-- CARD 10 -->
+
+      <div class="card">
+        <h3>Ethical Hacking 101 - Simplilearn</h3>
+
+        <p>
+          Successfully completed “Ethical Hacking 101: Beginner’s Guide to Ethical Hacking” certification from Simplilearn covering cybersecurity basics and ethical hacking concepts.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Ethical Hacking</span>
+          <span class="tag">Simplilearn</span>
+          <span class="tag">Cybersecurity Basics</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

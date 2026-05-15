@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+      radial-gradient(circle at top left, rgba(0,255,255,0.12), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(0,120,255,0.12), transparent 35%);
+      z-index:-1;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 0;
+      background:rgba(0,0,0,0.6);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,255,255,0.15);
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    .nav-container{
+      width:90%;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:bold;
+      color:cyan;
+      letter-spacing:2px;
+    }
+
+    .logo span{
+      color:white;
+    }
+
+    /* BACK BUTTON */
+
+    .back-btn{
+      text-decoration:none;
+      color:white;
+      border:1px solid rgba(255,255,255,0.2);
+      padding:12px 22px;
+      border-radius:12px;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .back-btn:hover{
+      border-color:cyan;
+      color:cyan;
+      box-shadow:0 0 20px rgba(0,255,255,0.15);
+    }
+
+    /* ABOUT SECTION */
+
+    .about-container{
+      width:90%;
+      max-width:1100px;
+      margin:auto;
+      padding:80px 0;
+    }
+
+    .title{
+      font-size:60px;
+      margin-bottom:40px;
+      text-align:center;
+      font-weight:bold;
+    }
+
+    .title span{
+      color:cyan;
+    }
+
+    /* PROFILE IMAGE */
+
+    .profile-image{
+      display:flex;
+      justify-content:center;
+      margin-bottom:40px;
+    }
+
+    .profile-image img{
+      width:260px;
+      height:260px;
+      object-fit:cover;
+      border-radius:50%;
+      border:5px solid cyan;
+      box-shadow:0 0 40px rgba(0,255,255,0.35);
+      transition:0.4s ease;
+    }
+
+    .profile-image img:hover{
+      transform:scale(1.05);
+      box-shadow:0 0 60px rgba(0,255,255,0.5);
+    }
+
+    /* ABOUT CARD */
+
+    .about-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(0,255,255,0.15);
+      border-radius:30px;
+      padding:50px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 0 40px rgba(0,255,255,0.08);
+      transition:0.4s ease;
+    }
+
+    .about-card:hover{
+      box-shadow:0 0 50px rgba(0,255,255,0.15);
+    }
+
+    .about-card p{
+      color:#cbd5e1;
+      line-height:1.9;
+      margin-bottom:25px;
+      font-size:18px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .title{
+        font-size:42px;
+      }
+
+      .profile-image img{
+        width:200px;
+        height:200px;
+      }
+
+      .about-card{
+        padding:30px;
+      }
+
+      .about-card p{
+        font-size:16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <div class="logo">
+        MY<span>PORTFOLIO</span>
+      </div>
+
+      <a href="index.html" class="back-btn">
+        ← Back
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- ABOUT SECTION -->
+
+  <div class="about-container">
+
+    <h1 class="title">
+      About <span>Me</span>
+    </h1>
+
+    <!-- PROFILE IMAGE -->
+
+    <div class="profile-image">
+
+      <img src="profile.jpeg" alt="Profile Picture">
+
+    </div>
+<h4 class="title">
+       Venkata Sai Rama Koteswara Rao Yemineni<span></span>
+    </h4>
+    <!-- ABOUT CONTENT -->
+
+    <div class="about-card">
+
+      <p>
+        I am a passionate cybersecurity enthusiast driven by curiosity,
+        continuous learning, and solving complex security challenges.
+        My interest in cybersecurity began with understanding how digital
+        systems work and gradually evolved into exploring vulnerabilities,
+        threat analysis, and secure system development.
+      </p>
+
+      <p>
+        Cybersecurity fascinates me because it combines logic, technology,
+        investigation, and problem-solving into one continuously evolving field.
+        I enjoy learning how cyber attacks occur, how security systems respond,
+        and how organizations can strengthen their infrastructure against modern threats.
+      </p>
+
+      <p>
+        I enjoy building practical cybersecurity projects that combine
+        technical skills with analytical thinking. Through projects such as
+        phishing URL detectors, honeypot systems, SIEM dashboards, and
+        password security analyzers, I have gained hands-on experience in
+        threat monitoring, intrusion detection, attack simulation, and defensive security.
+      </p>
+
+      <p>
+        Working on security-focused applications has improved my understanding
+        of real-world cyber threats and helped me develop a stronger mindset
+        towards identifying vulnerabilities, analyzing risks, and designing secure solutions.
+      </p>
+
+      <p>
+        My primary areas of interest include ethical hacking, network
+        security, digital forensics, web application security,
+        threat intelligence, vulnerability assessment, and incident response.
+        I am particularly interested in understanding attacker methodologies
+        and learning how organizations detect and respond to malicious activities.
+      </p>
+
+      <p>
+        I continuously improve my technical skills through cybersecurity labs,
+        Capture The Flag (CTF) challenges, self-learning platforms,
+        online research, and hands-on experimentation.
+        These experiences have strengthened my understanding of reconnaissance,
+        penetration testing concepts, privilege escalation, and traffic analysis.
+      </p>
+
+      <p>
+        I also enjoy learning about secure coding practices and application security.
+        Understanding how vulnerabilities such as SQL Injection, XSS,
+        authentication flaws, and insecure configurations occur motivates me
+        to explore defensive programming techniques and secure software development.
+      </p>
+
+      <p>
+        Apart from cybersecurity, I have experience developing frontend applications
+        using HTML, CSS, and JavaScript. Building responsive user interfaces and
+        interactive applications has improved my creativity, problem-solving ability,
+        and understanding of web technologies.
+      </p>
+
+      <p>
+        I believe cybersecurity is not only about protecting systems,
+        but also about developing a mindset of adaptability, resilience,
+        observation, and continuous improvement. The cybersecurity field evolves rapidly,
+        and staying updated with emerging technologies and modern attack techniques
+        motivates me to continuously learn and improve.
+      </p>
+
+      <p>
+        Discipline, consistency, and teamwork are values that I strongly believe in.
+        I enjoy collaborating with others, discussing cybersecurity concepts,
+        sharing technical knowledge, and contributing to projects that solve
+        real-world security challenges.
+      </p>
+
+      <p>
+        I am highly interested in Security Operations Center (SOC) workflows,
+        log monitoring, threat hunting, SIEM technologies, and incident response processes.
+        Understanding how organizations analyze suspicious activities and defend
+        against attacks inspires me to pursue a deeper career in defensive cybersecurity.
+      </p>
+
+      <p>
+        I enjoy solving technical problems that require logical thinking and
+        analytical decision-making. Whether it involves troubleshooting systems,
+        analyzing suspicious behavior, or building security tools,
+        I am motivated by challenges that help improve digital security and reliability.
+      </p>
+
+      <p>
+        Beyond technical learning, I value personal growth and self-discipline.
+        Activities such as fitness, reading, and exploring new technologies
+        help me maintain focus, improve productivity, and develop a balanced mindset.
+      </p>
+
+      <p>
+        My long-term goal is to become a highly skilled Cyber Security Engineer
+        and SOC Analyst capable of protecting organizations, analyzing threats,
+        and contributing to a safer digital world through technical expertise,
+        ethical practices, innovation, and continuous learning.
+      </p>
+
+      <p>
+        I aspire to build a successful career where I can contribute meaningfully
+        to information security, help organizations strengthen their cyber defense systems,
+        and continuously evolve alongside the rapidly changing cybersecurity landscape.
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
